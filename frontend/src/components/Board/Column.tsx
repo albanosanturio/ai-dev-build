@@ -60,10 +60,10 @@ export function Column({
   }
 
   return (
-    <div className="flex flex-col rounded-lg bg-slate-100/60">
+    <div className="flex flex-col rounded-lg bg-lakers-purple/5">
       <div className="flex items-center justify-between px-3 py-3">
-        <h2 className="text-sm font-semibold text-slate-700">{title}</h2>
-        <span className="rounded-full bg-slate-200 px-2 py-0.5 text-xs font-medium text-slate-500">
+        <h2 className="text-sm font-semibold text-lakers-purple">{title}</h2>
+        <span className="rounded-full bg-lakers-purple/10 px-2 py-0.5 text-xs font-medium text-lakers-purple">
           {tasks.length}
         </span>
       </div>
@@ -73,7 +73,7 @@ export function Column({
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
         className={`flex min-h-[140px] flex-1 flex-col gap-2 rounded-lg p-2 pt-0 transition-colors ${
-          isDraggingOver ? 'bg-slate-200/70' : ''
+          isDraggingOver ? 'bg-lakers-gold/20' : ''
         }`}
       >
         {tasks.length === 0 && !isDraggingOver && (
@@ -97,5 +97,5 @@ export function Column({
 }
 
 function DropIndicator() {
-  return <div className="h-1 rounded-full bg-slate-400/60" />;
+  return <div className="h-1 rounded-full bg-lakers-gold" />;
 }

@@ -52,7 +52,7 @@ export function TaskModal({ task, onClose, onCreate, onUpdate }: TaskModalProps)
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 px-4" onClick={onClose}>
       <div className="w-full max-w-md rounded-lg bg-white p-5 shadow-xl" onClick={stopPropagation}>
-        <h2 className="mb-4 text-base font-semibold text-slate-900">{isEdit ? 'Edit Task' : 'Add Task'}</h2>
+        <h2 className="mb-4 text-base font-semibold text-lakers-purple">{isEdit ? 'Edit Task' : 'Add Task'}</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="mb-1 block text-xs font-medium text-slate-600">Title</label>
@@ -63,7 +63,7 @@ export function TaskModal({ task, onClose, onCreate, onUpdate }: TaskModalProps)
                 setTitle(e.target.value);
                 setTitleError(null);
               }}
-              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:border-slate-500 focus:outline-none"
+              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:border-lakers-purple focus:outline-none focus:ring-1 focus:ring-lakers-purple"
               placeholder="Task title"
             />
             {titleError && <p className="mt-1 text-xs text-red-500">{titleError}</p>}
@@ -75,7 +75,7 @@ export function TaskModal({ task, onClose, onCreate, onUpdate }: TaskModalProps)
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               rows={3}
-              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:border-slate-500 focus:outline-none"
+              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:border-lakers-purple focus:outline-none focus:ring-1 focus:ring-lakers-purple"
               placeholder="Optional details"
             />
           </div>
@@ -87,7 +87,7 @@ export function TaskModal({ task, onClose, onCreate, onUpdate }: TaskModalProps)
                 type="date"
                 value={dueDate ?? ''}
                 onChange={(e) => setDueDate(e.target.value)}
-                className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:border-slate-500 focus:outline-none"
+                className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:border-lakers-purple focus:outline-none focus:ring-1 focus:ring-lakers-purple"
               />
             </div>
             <label className="flex items-center gap-2 pt-5 text-sm text-slate-700">
@@ -95,7 +95,7 @@ export function TaskModal({ task, onClose, onCreate, onUpdate }: TaskModalProps)
                 type="checkbox"
                 checked={isHot}
                 onChange={(e) => setIsHot(e.target.checked)}
-                className="h-4 w-4 rounded border-slate-300"
+                className="h-4 w-4 rounded border-slate-300 text-lakers-purple focus:ring-lakers-purple"
               />
               🔥 HOT
             </label>
@@ -112,7 +112,7 @@ export function TaskModal({ task, onClose, onCreate, onUpdate }: TaskModalProps)
             <button
               type="submit"
               disabled={submitting}
-              className="rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-700 disabled:opacity-50"
+              className="rounded-md bg-lakers-purple px-4 py-2 text-sm font-bold text-lakers-gold hover:bg-lakers-purpleDark disabled:opacity-50"
             >
               {submitting ? 'Saving…' : isEdit ? 'Save changes' : 'Add Task'}
             </button>

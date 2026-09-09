@@ -30,7 +30,7 @@ export function TaskCard({ task, onEdit, onDelete, onArchive }: TaskCardProps) {
       draggable
       onDragStart={handleDragStart}
       onClick={onEdit}
-      className="group cursor-grab rounded-md border border-slate-200 bg-white p-3 shadow-sm transition hover:shadow active:cursor-grabbing"
+      className="group cursor-grab rounded-md border border-slate-200 border-l-4 border-l-lakers-purple bg-white p-3 shadow-sm transition hover:shadow active:cursor-grabbing"
     >
       <div className="flex items-start justify-between gap-2">
         <p className="text-sm font-medium text-slate-800">{task.title}</p>
@@ -47,7 +47,7 @@ export function TaskCard({ task, onEdit, onDelete, onArchive }: TaskCardProps) {
       {(task.is_hot || overdue || task.due_date) && (
         <div className="mt-2 flex flex-wrap items-center gap-1.5">
           {task.is_hot && (
-            <span className="rounded-full bg-orange-100 px-2 py-0.5 text-[11px] font-semibold text-orange-600">
+            <span className="rounded-full bg-lakers-gold px-2 py-0.5 text-[11px] font-semibold text-lakers-purpleDark">
               🔥 HOT
             </span>
           )}
@@ -64,7 +64,7 @@ export function TaskCard({ task, onEdit, onDelete, onArchive }: TaskCardProps) {
         <button
           type="button"
           onClick={stopAnd(onArchive)}
-          className="mt-3 w-full rounded-md border border-slate-200 py-1 text-xs font-medium text-slate-500 transition hover:bg-slate-50 hover:text-slate-700"
+          className="mt-3 w-full rounded-md border border-lakers-purple/30 py-1 text-xs font-medium text-lakers-purple transition hover:bg-lakers-purple/5"
         >
           Archive
         </button>
